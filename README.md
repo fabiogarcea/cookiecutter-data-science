@@ -26,7 +26,7 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
-    cookiecutter https://github.com/drivendata/cookiecutter-data-science
+    cookiecutter https://github.com/fabiogarcea/cookiecutter-data-science
 
 
 [![asciicast](https://asciinema.org/a/244658.svg)](https://asciinema.org/a/244658)
@@ -42,10 +42,10 @@ The directory structure of your new project looks like this:
 ├── Makefile           <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
 ├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+│   ├── external       <- Data from third party sources.
+│   ├── interim        <- Intermediate data that has been transformed.
+│   ├── processed      <- The final, canonical data sets for modeling.
+│   └── raw            <- The original, immutable data dump.
 │
 ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
 │
@@ -58,27 +58,39 @@ The directory structure of your new project looks like this:
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
+│   └── figures        <- Generated graphics and figures to be used in reporting
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 │
-├── src                <- Source code for use in this project.
-│   ├── __init__.py    <- Makes src a Python module
-│   │
-│   ├── data           <- Scripts to download or generate data
+├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+|
+├── scripts            <- Scripts to run different configurations of the source code
+|   │
+│   ├── data           <- Scripts to process data
 │   │   └── make_dataset.py
+|   |
+│   ├── features       <- Scripts to turn raw data into features for modeling
+|   |   └── build_features.py
 │   │
-│   ├── features       <- Scripts to turn raw data into features for modeling
-│   │   └── build_features.py
-│   │
-│   ├── models         <- Scripts to train models and then use trained models to make
-│   │   │                 predictions
+│   ├── models         <- Scripts to train models and use them to make predictions
 │   │   ├── predict_model.py
-│   │   └── train_model.py
+|   |   └── train_model.py
+|   |
+│   └── visualization  <- Scripts to produce visualizations
+|       └── visualize.py
+|
+|
+├── src                <- Source code for use in this project.
+│   ├── __init__.py    <- Makes src a Python module
 │   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-│       └── visualize.py
+│   ├── data           <- Source code to process data
+│   │
+│   ├── features       <- Source code to turn raw data into features for modeling
+│   │
+│   ├── models         <- Source code to train models and use them to make predictions
+│   │
+│   └── visualization  <- Source code to produce visualizations
 │
 └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 ```

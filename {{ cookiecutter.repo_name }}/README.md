@@ -32,22 +32,33 @@ Project Organization
     │                         generated with `pip freeze > requirements.txt`
     │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+    |
+    ├── scripts            <- Scripts to run different configurations of the source code
+    |   │
+    │   ├── data           <- Scripts to process data
+    │   │   └── make_dataset.py
+    |   |
+    │   ├── features       <- Scripts to turn raw data into features for modeling
+    |   |   └── build_features.py
+    │   │
+    │   ├── models         <- Scripts to train models and use them to make predictions
+    │   │   ├── predict_model.py
+    |   |   └── train_model.py
+    |   |
+    │   └── visualization  <- Scripts to produce visualizations
+    |       └── visualize.py
+    |
+    |
     ├── src                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
+    │   ├── data           <- Source code to process data
     │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
+    │   ├── features       <- Source code to turn raw data into features for modeling
     │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
+    │   ├── models         <- Source code to train models and use them to make predictions
     │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
+    │   └── visualization  <- Source code to produce visualizations
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 
