@@ -81,7 +81,7 @@ The directory structure of your new project looks like this:
 |       └── visualize.py
 |
 |
-├── {{ module_name }}  <- Source code for use in this project.
+├── {{ cookiecutter.module_name }}  <- Source code for use in this project.
 │   ├── __init__.py    <- Makes src a Python module
 │   │
 │   ├── data           <- Source code to process data
