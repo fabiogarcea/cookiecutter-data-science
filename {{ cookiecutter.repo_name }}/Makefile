@@ -26,7 +26,7 @@ install:
 
 ## Uninstall the source code folder as a Python Module
 uninstall:
-	$(PYTHON_INTERPRETER) -m pip uninstall {{ cookiecutter.module_name }} -y
+	pip uninstall {{ cookiecutter.module_name }} -y
 
 ## Install Python Dependencies
 requirements: test_environment
