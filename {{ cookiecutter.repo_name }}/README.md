@@ -49,7 +49,7 @@ Project Organization
     |       └── visualize.py
     |
     |
-    ├── src                <- Source code for use in this project.
+    ├── {{ cookiecutter.module_name }}                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
     │   ├── data           <- Source code to process data
